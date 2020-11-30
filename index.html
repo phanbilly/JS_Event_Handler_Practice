@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener Practice</title>
+</head>
+<body>
+    <h1>Event Listener Practice</h1>
+
+    <button id=btn-1>Date</button>
+    <span id="btn-1-date"></span>
+    <button id="resetBtn">Clear Date</button>
+    <script>
+
+        // displays date when clicked
+        document.getElementById("btn-1").addEventListener("click", displayDate);
+        function displayDate() {
+            document.getElementById("btn-1-date").innerHTML = Date();
+        }        
+        
+        // function to reset date
+        document.getElementById("resetBtn").addEventListener("click", reset);
+        function reset() {
+            document.getElementById("btn-1-date").remove();
+        }
+    </script>
+
+    <style>
+      body{
+          display: flex;
+          flex-direction: column;
+      }
+
+      .resetBtn {
+          margin-bottom: 20px;
+      }
+    </style>
+</body>
+</html>
